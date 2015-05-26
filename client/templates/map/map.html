@@ -1,9 +1,47 @@
 <template name="map">
 
-    <h4> Leaflet Map Test </h4>
+    <h3> NEW YORK, NY, U.S.A </h3>
 
-    <div id="map"></div>
+    <!--<p> <a href="#" id="getDukeboxLocations"> getDukeboxLocations </a> </p>-->
 
-    <div>{{locations}}</div>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for an artist...">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Go!</button>
+                      </span>
+                </div><!-- /input-group -->
+            </div>
+        </div>
+
+        <br/>
+
+        <div class="row">
+            <div class="col-md-5">
+                <div id="map"></div>
+            </div>
+            <div class="col-md-5">
+                {{#with focus}}
+                    <h3>{{name}}</h3>
+                    <p>{{type}}</p>
+                {{/with}}
+                <div id="albums"></div>
+            </div>
+        </div>
+
+        <br/>
+
+        <div class="row">
+            <div class="col-md-12">
+            </div>
+        </div>
+
+
+    </div>
+
+
 
 </template>
